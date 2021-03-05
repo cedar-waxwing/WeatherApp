@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link href="./styles.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <title>Layout</title>
 </head>
 
@@ -16,13 +16,12 @@
     &nbsp;
     <h1 class="text-center">Weather App</h1>
     <div class="container">
-        <div>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Enter ZIP" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Get Weather</button>
+        <div class = "input">
+            <form class="d-flex"></form>
+                <input id="zipcode" class="form-control me-2" type="text" placeholder="Enter ZIP" aria-label="Search">
+                <button onclick= "retrieval()" class="btn btn-outline-success" type="button" value="submit">Get Weather</button>
             </form>
         </div>
-        <div>Put potential error message here if necessary </div>
         &nbsp;
         <div class="container border border-secondary">
             &nbsp;
@@ -32,8 +31,8 @@
                         <div class="card-header">
                             City
                         </div>
-                        <div class="card-body">
-                            <p>City data here</p>
+                        <div class="city card-body">
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -47,17 +46,17 @@
                         <div class="card-group">
                             <div class="card">
                                 <div class="card-body">
-                                    <p class="card-text">Kelvin</p>
+                                    <p class="kelvin card-text">K</p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-body">
-                                    <p class="card-text">Celcius</p>
+                                    <p class="celcius card-text">°C</p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-body">
-                                    <p class="card-text">Fahrenheit</p>
+                                    <p class="fahrenheit card-text">°F</p>
                                 </div>
                             </div>
                         </div>
@@ -68,10 +67,10 @@
             <div class="col-sm text-center">
                 <div class="card text-dark bg-light mb-3">
                     <div class="card-header">
-                        Condition
+                        Conditions
                     </div>
-                    <div class="card-body">
-                        <p>Condition data here</p>
+                    <div class="conditions card-body">
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -82,8 +81,8 @@
                     <div class="card-header">
                         Other Info
                     </div>
-                    <div class="card-body">
-                        <p>Image here</p>
+                    <div class="image card-body">
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -91,7 +90,8 @@
     </div>
     </div>
     </div>
-    </div>
-
-
+</div>
 </body>
+<script src="./js/main.js"></script>
+
+</html>
