@@ -12,22 +12,22 @@
     <title>Layout</title>
 </head>
 
-<body>
+<body class="background">
     &nbsp;
-    <h1 class="text-center">Weather App</h1>
-    <div class="container">
-        <div class = "input">
-            <form class="d-flex"></form>
-                <input id="zipcode" class="form-control me-2" type="text" placeholder="Enter ZIP" aria-label="Search">
-                <button onclick= "retrieval()" class="btn btn-outline-success" type="button" value="submit">Get Weather</button>
+    <h1 class="text-center">What's the weather?</h1>
+    &nbsp;
+    <div class="topbar container">
+            <form class="d-flex d-grid mx-auto">
+                <input id="zipcode" class="search form-control me-4" type="text" placeholder="Enter ZIP" aria-label="Search">
+                <button onclick="retrieval()" class="btn btn-info text-light btn-lg" type="button"
+                    value="submit">Weather</button>
             </form>
-        </div>
         &nbsp;
-        <div class="container border border-secondary">
+        <div class="container border border-info">
             &nbsp;
             <div class="row">
                 <div class="col-sm text-center">
-                    <div class="card text-dark bg-light mb-3">
+                    <div class="card text-dark bg-light mb-3 ">
                         <div class="card-header">
                             City
                         </div>
@@ -44,7 +44,7 @@
                             Tempurature
                         </div>
                         <div class="card-group">
-                            <div class="card">
+                            <div class="card ">
                                 <div class="card-body">
                                     <p class="kelvin card-text">K</p>
                                 </div>
@@ -63,35 +63,36 @@
                     </div>
                 </div>
             </div>
-        <div class="row">
-            <div class="col-sm text-center">
-                <div class="card text-dark bg-light mb-3">
-                    <div class="card-header">
-                        Conditions
+            <div class="row">
+                <div class="col-sm text-center">
+                    <div class="card text-dark bg-light mb-3">
+                        <div class="card-header">
+                            Conditions
+                        </div>
+                        <div class="conditions card-body">
+                            <p></p>
+                        </div>
                     </div>
-                    <div class="conditions card-body">
-                        <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm text-center">
+                    <div class="card text-dark bg-light mb-3">
+                        <div class="card-header">
+                            Other Info
+                        </div>
+                        <div class="card-body">
+                            <img src = "" class="icon" id = "icon"> </img>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm text-center">
-                <div class="card text-dark bg-light mb-3">
-                    <div class="card-header">
-                        Other Info
-                    </div>
-                    <div class="image card-body">
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     </div>
     </div>
-</div>
 </body>
 <script src="./js/main.js"></script>
 
 </html>
+

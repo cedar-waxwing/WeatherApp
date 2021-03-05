@@ -6,7 +6,7 @@ let kelvin = document.querySelector(".kelvin");
 let celcius = document.querySelector(".celcius");
 let fahrenheit = document.querySelector(".fahrenheit");
 let conditions = document.querySelector(".conditions");
-let image = document.querySelector(".image");
+let icon = document.querySelector(".icon");
 
 // function retrieval() {
 //     let zip = document.getElementsByClassName("zipcode").value
@@ -35,50 +35,16 @@ function retrieval() {
                 let cityValue = data['name'];
                 let kelvinValue = data['main']['temp'];
                 let conditionsValue = data['weather'][0]['main'];
+                let picture = data.weather[0].icon
 
                 city.innerHTML = cityValue;
                 kelvin.innerHTML = kelvinValue + " K";
                 conditions.innerHTML = conditionsValue;
                 celcius.innerHTML = (Math.round(kelvinValue - 273.15)) + " °C";
                 fahrenheit.innerHTML = (Math.round(1.8*(kelvinValue - 273) + 32)) + " °F";
+                icon.src = "http://openweathermap.org/img/wn/" + picture + "@4x.png"
             };
         }) .catch(function(err) {
              alert(err)
 })
 }
-
-
-//button.addEventListener ("click", () => { })
-
-// }
-    
-// function retrieval() {
-//     let zip = "40508"
-//         const appID = "284ef8b222342e68981f6ce3ab5b3de2"
-//      const api_url = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&appid=${appID}`
-//      fetch(api_url)
-//             .then(function(response) {
-//             return response.json()
-//         }) .then(function(data) {
-//             console.log(data)
-//         }) .catch(function(err) {
-//             console.log(err)
-//         })
-// };
-// retrieval()
-
-// function retrieval() {
-//     let zip = "40508"
-//     const appID = "284ef8b222342e68981f6ce3ab5b3de2"
-//     const api_url = `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&appid=${appID}`
-//         fetch(api_url)
-//             .then(function(res) {
-//                 return res.json()
-//             }) .then(function(data) {
-//                 console.log(data)
-//             })
-//             .catch(function(err) {
-//                 console.log(err)
-//             })
-//     };
-//     retrieval()
