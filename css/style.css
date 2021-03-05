@@ -1,0 +1,12 @@
+.background {
+    background-image: url("../img/background.jpg");
+}
+
+.search {
+    min-width: 10rem;
+}
+
+.topbar {
+    margin: 0 auto;
+    display: inline-block;
+}
