@@ -8,21 +8,6 @@ let fahrenheit = document.querySelector(".fahrenheit");
 let conditions = document.querySelector(".conditions");
 let icon = document.querySelector(".icon");
 
-// function retrieval() {
-//     let zip = document.getElementsByClassName("zipcode").value
-//     const appID = "284ef8b222342e68981f6ce3ab5b3de2"
-//     fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=${appID}`)
-//         .then(function(response) {
-//             return response.json()
-//         })
-//         .then(function(data) {
-//             console.log(data)
-//         })
-//         .catch(function(err) {
-//             alert(err)
-//         })
-// };
-
 function retrieval() {
     // console.log(document.getElementById("zipcode").value)
     const appID = "284ef8b222342e68981f6ce3ab5b3de2"
