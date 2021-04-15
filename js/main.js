@@ -6,7 +6,7 @@ let celcius = document.querySelector(".celcius");
 let fahrenheit = document.querySelector(".fahrenheit");
 let conditions = document.querySelector(".conditions");
 let icon = document.querySelector(".icon");
-// let sponge = document.querySelector(".sponge");
+let sponge = document.querySelector(".sponge");
 
 
 function retrieval() {
@@ -20,7 +20,7 @@ function retrieval() {
             return res.json()
         }).then(function(data) {
             //I kept the console log in here in case I need to look at the API data in devtools.
-            console.log(data)
+            //console.log(data) - Saving for debugging
             {
                 //this says, take the json data and apply variables to that data. The format on the left
                 //is pulling the specific call response. 
@@ -38,9 +38,9 @@ function retrieval() {
                 fahrenheit.innerHTML = (Math.round(1.8*(kelvinValue - 273) + 32)) + " °F";
                 //this is the image source for the icon 
                 icon.src = "http://openweathermap.org/img/wn/" + picture + "@4x.png"
-                // if (kelvinValue < 300) {
-                //     sponge.src = "../img/sponge.gif"
-            //     }
+                if (kelvinValue < 300) {
+                    sponge.src = "../img/sponge.gif"
+                }
             };
             //this is the "else" of this promises format -- if nothing above works, return an error. 
             //This error message gives you the specific error to be helpful, rather than giving a generic error message
