@@ -1,0 +1,1 @@
+This Weather App prompts the user to enter a ZIP code, and returns the current weather at that location via the OpenWeather API (api.openweathermap.org.)
